@@ -1,0 +1,196 @@
+! Based heavily on
+! https://www.reddit.com/r/unixporn/comments/7c3mn8/i3wm_polybar_xfce4terminal_oksh/
+[colors]
+! these aren't really used by me
+#background = #181B20
+background = #000000
+background-alt = #212121
+foreground = #fafafa
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/top]
+;monitor = LVDS-1
+width = 100%
+height = 22
+offset-x = 0
+offset-y = 0
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Siji:pixelsize=13;2
+font-1 = Hack Bold:size=11;2
+font-2 = Siji:size=8;1
+
+modules-left = debian i3
+modules-center = xwindow
+modules-right = wireless-network cpu memory battery date time
+
+tray-position = right
+tray-padding = 2
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+format-underline = #42A89A
+
+
+[module/debian]
+type = custom/script
+exec = "echo 9.4"
+
+format-prefix = "Debian "
+format-prefix-foreground = #d70a53
+
+
+[module/i3]
+type = internal/i3
+
+enable-click = true
+strip-wsnumbers = true
+
+ws-icon-0 = 1;♚
+ws-icon-1 = 2;♛
+ws-icon-2 = 3;♜
+ws-icon-3 = 4;♝
+ws-icon-4 = 5;♞
+ws-icon-default = ♟
+
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-background = #2f2f2f
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-padding = 2
+
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 2
+
+
+[module/cpu]
+type = internal/cpu
+interval = 5
+format-prefix = " "
+format-prefix-foreground = #42A89A
+label = %percentage%%
+
+
+[module/memory]
+type = internal/memory
+interval = 5
+format-prefix = " "
+format-prefix-foreground = #BF4A36
+label = %percentage_used%%
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%B %d"
+date-alt = "%b-%d-%y"
+
+time = %H:%M
+time-alt = %H:%M
+
+format-prefix = " "
+format-prefix-foreground = #BF4A36
+
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 5
+
+time = %I:%M %p
+format-prefix = " "
+format-prefix-foreground = #42A89A
+label = %time%
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-full-prefix = " "
+format-full-prefix-foreground = #42A89A
+
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = #42A89A
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = #42A89A
+animation-charging-framerate = 750
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+
+format-muted = <label-muted>
+label-muted = 
+label-muted-foreground = #66
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = #027AB6
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-disconnected = %{F#666}%{F#ccfafafa} not connected
+label-disconnected-foreground = #66
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = #666
+
+[settings]
+screenchange-reload = true
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5

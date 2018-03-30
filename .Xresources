@@ -1,0 +1,46 @@
+![colors]
+background: #222
+background-alt: #444
+foreground: #fff
+foreground-alt: #ffaa00
+primary: #ffb52a
+secondary: #e60053
+alert: #bd2c40
+
+! special
+*.foreground:   #cacebc
+*.background:   #0e0e0c
+*.cursorColor:  #cacebc
+
+! black
+*.color0:       #171815
+*.color8:       #f2b797
+
+! red
+*.color1:       #20211d
+*.color9:       #e5b7a1
+
+! green
+*.color2:       #31322d
+*.color10:      #e2c0d1
+
+! yellow
+*.color3:       #484a43
+*.color11:      #cbc1e8
+
+! blue
+*.color4:       #65685e
+*.color12:      #6ebbd0
+
+! magenta
+*.color5:       #898b7f
+*.color13:      #efbba1
+
+! cyan
+*.color6:       #b2b5a6
+*.color14:      #bbcd69
+
+! white
+*.color7:       #e0e4d1
+*.color15:      #6fa690
+
