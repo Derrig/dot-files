@@ -1,0 +1,27 @@
+#!/bin/bash
+
+i3lock \
+    --timestr "%I:%M %p" \
+    --timepos "105:h-50" \
+    --datestr "Free as in freedom." \
+    --datepos "tx+23:ty+30" \
+    --time-font="Roboto:style=Light" \
+    --{date,verif,wrong}-font="Roboto:style=Light Italic" \
+    --timesize=40 \
+    --datesize=25 \
+    --timecolor="D3F3F4AA" \
+    --{date,wrong}color="F4DCD3AA" \
+    --verifcolor="92D9DBAA" \
+    --clock \
+    --blur 5 \
+    --bar-indicator \
+    --bar-position "-22" \
+    --keyhlcolor="92D9DBAA" \
+    --bshlcolor="F4DCD3AA" \
+    --ringvercolor="92D9DBAA" \
+    --ringwrongcolor="F4DCD3AA" \
+    --veriftext="Standby..." \
+    --noinputtext="Enter your password, silly!" \
+    --wrongtext="Wrong password, bub."
+
+exit 0
