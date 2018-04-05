@@ -120,6 +120,10 @@ NC='\e[0m'
 # lambda prompt
 PS1="  \[\e[1;36m\]λ \W \[\e[0m\]"
 
+function cs () {
+    cd "$@" && ls
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

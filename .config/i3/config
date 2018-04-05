@@ -180,8 +180,8 @@ exec_always --no-startup-id pkill polybar
 exec_always --no-startup-idpolybar -r top
 
 bindsym $mod+q kill window
-bindsym $mod+Tab workspace nextonoutput
-bindsym $mod+Shift+Tab workspace prevonoutput
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+space exec dmenu_run -nb '#000000' -sb '#328176' -fn 'Hack-12.5'
 bindsym Menu exec ~/backlight
 bindsym $mod+backslash exec ~/lock
