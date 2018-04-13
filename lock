@@ -15,7 +15,7 @@ i3lock \
     --clock \
     --blur 5 \
     --bar-indicator \
-    --bar-position "-22" \
+    --bar-position "-23" \
     --keyhlcolor="92D9DBAA" \
     --bshlcolor="F4DCD3AA" \
     --ringvercolor="92D9DBAA" \
