@@ -172,8 +172,13 @@ gaps inner 10
 gaps outer 2
 smart_gaps on
 
-### My stuff
+### My stuff ###
+
+## Set border pixel 2 and uncomment smart_borders
+## for the borders you like
 for_window [class="^.*"] border pixel 0
+# smart_borders on
+
 exec_always --no-startup-id compton
 exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/eric-mountains.jpg
 exec_always --no-startup-id pkill polybar
