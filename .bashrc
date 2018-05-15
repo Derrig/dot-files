@@ -160,3 +160,7 @@ fi
 #export LESS_TERMCAP_ue=$default
 # Begin underline
 #export LESS_TERMCAP_us=$green
+
+#terminal title by last command
+#https://stackoverflow.com/a/7110386
+trap 'echo -ne "\033]0;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
