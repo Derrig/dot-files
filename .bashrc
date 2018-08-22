@@ -166,3 +166,4 @@ fi
 trap 'echo -ne "\033]0;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
 
 alias g=git
+alias fan="cat ~/SysUtils/fan"
