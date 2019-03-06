@@ -167,3 +167,31 @@ trap 'echo -ne "\033]0;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
 
 alias g=git
 alias fan="cat ~/SysUtils/fan"
+alias py="python3"
+alias pro="prolog"
+alias bat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias vultr="ssh root@108.61.155.189"
+alias cv="source activate cs4670"
+alias bssid=" nmcli -f in-use,SSID,BSSID,signal,bars dev wifi"
+
+function open () {
+  xdg-open "$@"&
+  disown
+}
+
+export RTV_EDITOR=vim
+
+PATH=$PATH:/opt/anaconda3/bin
+
+# save path on cd
+function cd {
+	    builtin cd $@
+	        pwd > ~/.last_dir
+	}
+
+# restore last saved path
+if [ -f ~/.last_dir ]
+    then cd `cat ~/.last_dir`
+fi
+
+
