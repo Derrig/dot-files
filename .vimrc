@@ -22,3 +22,6 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 colorscheme nord
+
+:set expandtab
+:set tabstop=4

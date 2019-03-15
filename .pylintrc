@@ -46,9 +46,6 @@ unsafe-load-any-extension=no
 
 
 [MESSAGES CONTROL]
-# TEMP - don't disable warnings forever...
-disable=W
-
 # Only show warnings with the listed confidence levels. Leave empty to show
 # all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.
 confidence=
@@ -62,7 +59,10 @@ confidence=
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
-disable=print-statement,
+#
+# TEMP DISABLE WARNINGS AND CONVENTIONS
+disable=W,C,
+	print-statement,
         parameter-unpacking,
         unpacking-in-except,
         old-raise-syntax,
