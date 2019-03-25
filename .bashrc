@@ -170,9 +170,11 @@ alias fan="cat ~/SysUtils/fan"
 alias py="python3"
 alias pro="prolog"
 alias bat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
-alias vultr="ssh root@108.61.155.189"
+alias aws="ssh admin@107.23.83.75"
 alias cv="source activate cs4670"
 alias bssid=" nmcli -f in-use,SSID,BSSID,signal,bars dev wifi"
+alias source="source ~/.bashrc"
+alias signal="signal-desktop"
 
 function open () {
   xdg-open "$@"&
