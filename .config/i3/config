@@ -182,7 +182,7 @@ for_window [class="^.*"] border pixel 0
 exec_always --no-startup-id compton
 exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/eric-mountains.jpg
 exec_always --no-startup-id pkill polybar
-exec_always --no-startup-idpolybar -r top
+exec_always --no-startup-id polybar -r top
 
 bindsym $mod+q kill window
 bindsym $mod+Tab workspace next
